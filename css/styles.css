@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --bg-color: #1e1e2e;
+  --display-bg: #6c8e6e;
+  --key-color: #9e6442;
+  --operator-color: #f0f0f0;
+  --calc-bg: #c0c0c0;
+  --calc-shadow: #666666;
+  --key-shadow: #adadad;
+  --display-shadow: #577a59;
+  --calc-key: #f0f0f0;
+  --op-key: #f09b4b;
+  --result-key: #5f5f7a;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+  font-weight: 800;
+}
+
+.container1 {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container1 .calculator {
+  aspect-ratio: 10/16;
+  height: 70%;
+  background-color: var(--calc-bg);
+  border-radius: 35px;
+  padding: 3.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: relative;
+}
+.container1 .calculator::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--calc-shadow);
+  transform: translate(0.8em, 0.8em);
+  top: 0;
+  left: 0;
+  border-radius: 35px;
+}
+.container1 .calculator .display {
+  width: 100%;
+  height: 2.5em;
+  background-color: var(--display-bg);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline: 0.5em;
+  font-weight: 600;
+  font-size: 2em;
+  box-shadow: inset 5px 5px 0 0 var(--display-shadow);
+}
+.container1 .calculator .keyboard {
+  width: 100%;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+}
+.container1 .calculator .keyboard .key {
+  width: 100%;
+  height: 100%;
+  background-color: var(--calc-key);
+  color: var(--key-color);
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  font-size: 1.2em;
+  box-shadow: 5px 5px 0 0 var(--key-shadow);
+}
+.container1 .calculator .keyboard .key.operator {
+  background-color: var(--op-key);
+  color: var(--operator-color);
+}
+.container1 .calculator .keyboard .key.result {
+  color: var(--operator-color);
+  background-color: var(--result-key);
+}
+
+/*# sourceMappingURL=styles.css.map */

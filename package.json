@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "This is a calculator made for excercise purposes.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "Gian Luca Porto",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
